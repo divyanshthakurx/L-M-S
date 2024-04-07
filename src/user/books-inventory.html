@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body class="m-0 p-0 flex flex-col min-h-screen">
+    <header>
+        <nav class="flex justify-between items-center px-8 py-8 md:px-16 md:py-14">
+            <div class="align-middle md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="45" height="45" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 88 19.229 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 19.229 88 19.229 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 88 47 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 47 88 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 88 74.771 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 74.771 88 74.771 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 9.574 26.802 C 4.295 26.802 0 22.507 0 17.229 c 0 -5.279 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 C 19.148 22.507 14.853 26.802 9.574 26.802 z M 9.574 11.654 C 6.5 11.654 4 14.155 4 17.229 c 0 3.073 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.5 5.574 -5.574 C 15.148 14.155 12.647 11.654 9.574 11.654 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 9.574 54.574 C 4.295 54.574 0 50.279 0 45 s 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 S 14.853 54.574 9.574 54.574 z M 9.574 39.426 C 6.5 39.426 4 41.926 4 45 c 0 3.073 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.501 5.574 -5.574 C 15.148 41.926 12.647 39.426 9.574 39.426 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 9.574 82.346 C 4.295 82.346 0 78.051 0 72.771 s 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 S 14.853 82.346 9.574 82.346 z M 9.574 67.197 C 6.5 67.197 4 69.698 4 72.771 s 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.501 5.574 -5.574 S 12.647 67.197 9.574 67.197 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden md:block">
+                <a href="./books-issued.html"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 79.635 73.696 C 86.104 65.901 90 55.898 90 45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 c 0 10.898 3.896 20.901 10.365 28.696 c 0.105 0.161 0.227 0.315 0.383 0.445 c 0.002 0.002 0.005 0.003 0.007 0.005 C 19.015 83.837 31.298 90 45 90 c 13.702 0 25.985 -6.163 34.245 -15.854 c 0.003 -0.002 0.005 -0.003 0.008 -0.005 C 79.408 74.01 79.53 73.857 79.635 73.696 z M 45 4 c 22.607 0 41 18.393 41 41 c 0 9.169 -3.026 17.645 -8.132 24.482 c -6.081 -6.505 -13.876 -10.99 -22.402 -13.023 c 6.497 -3.669 10.901 -10.629 10.901 -18.609 c 0 -11.782 -9.585 -21.367 -21.367 -21.367 c -11.782 0 -21.367 9.585 -21.367 21.367 c 0 7.979 4.404 14.939 10.901 18.608 c -8.526 2.033 -16.321 6.518 -22.402 13.023 C 7.026 62.645 4 54.169 4 45 C 4 22.393 22.393 4 45 4 z M 45 55.217 c -9.576 0 -17.367 -7.791 -17.367 -17.367 S 35.424 20.482 45 20.482 s 17.367 7.791 17.367 17.367 S 54.576 55.217 45 55.217 z M 45 86 c -11.986 0 -22.787 -5.171 -30.29 -13.399 C 22.48 64.079 33.418 59.217 45 59.217 c 11.581 0 22.52 4.863 30.29 13.384 C 67.787 80.829 56.986 86 45 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg></a>
+            </div>
+
+            <!-- <div class="align-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 3 90 c -0.768 0 -1.536 -0.293 -2.121 -0.879 c -1.172 -1.171 -1.172 -3.071 0 -4.242 l 84 -84 c 1.172 -1.172 3.07 -1.172 4.242 0 c 1.172 1.171 1.172 3.071 0 4.242 l -84 84 C 4.536 89.707 3.768 90 3 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 87 90 c -0.768 0 -1.535 -0.293 -2.121 -0.879 l -84 -84 c -1.172 -1.171 -1.172 -3.071 0 -4.242 c 1.171 -1.172 3.071 -1.172 4.242 0 l 84 84 c 1.172 1.171 1.172 3.071 0 4.242 C 88.535 89.707 87.768 90 87 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                    </svg>
+            </div> -->
+
+            <div class="hidden md:block no-underline font-semibold text-xl">
+                <ul class="flex content-center justify-around cursor-pointer">
+                    <li><a href="./books-issued.html">Issued Books</a></li>
+                    <li><a class="mx-10" href="./books-inventory.html">Book Inventory</a></li>
+                    <li><a href="./pay-fine.html">Pay Fine</a></li>
+                </ul>
+            </div>
+
+            <div class="align-middle">
+                <!-- <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 79.635 73.696 C 86.104 65.901 90 55.898 90 45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 c 0 10.898 3.896 20.901 10.365 28.696 c 0.105 0.161 0.227 0.315 0.383 0.445 c 0.002 0.002 0.005 0.003 0.007 0.005 C 19.015 83.837 31.298 90 45 90 c 13.702 0 25.985 -6.163 34.245 -15.854 c 0.003 -0.002 0.005 -0.003 0.008 -0.005 C 79.408 74.01 79.53 73.857 79.635 73.696 z M 45 4 c 22.607 0 41 18.393 41 41 c 0 9.169 -3.026 17.645 -8.132 24.482 c -6.081 -6.505 -13.876 -10.99 -22.402 -13.023 c 6.497 -3.669 10.901 -10.629 10.901 -18.609 c 0 -11.782 -9.585 -21.367 -21.367 -21.367 c -11.782 0 -21.367 9.585 -21.367 21.367 c 0 7.979 4.404 14.939 10.901 18.608 c -8.526 2.033 -16.321 6.518 -22.402 13.023 C 7.026 62.645 4 54.169 4 45 C 4 22.393 22.393 4 45 4 z M 45 55.217 c -9.576 0 -17.367 -7.791 -17.367 -17.367 S 35.424 20.482 45 20.482 s 17.367 7.791 17.367 17.367 S 54.576 55.217 45 55.217 z M 45 86 c -11.986 0 -22.787 -5.171 -30.29 -13.399 C 22.48 64.079 33.418 59.217 45 59.217 c 11.581 0 22.52 4.863 30.29 13.384 C 67.787 80.829 56.986 86 45 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg> -->
+
+                <a href="./notifications.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 83.25 74.548 H 6.75 c -1.536 0 -2.864 -0.988 -3.306 -2.457 c -0.441 -1.468 0.122 -3.022 1.401 -3.868 c 0.896 -0.594 1.954 -1.152 3.233 -1.707 c 5.52 -2.514 6.42 -16.025 7.144 -26.882 c 0.182 -2.74 0.355 -5.327 0.59 -7.664 c 1.926 -12.752 8.052 -20.942 18.223 -24.424 C 35.767 3.067 40.169 0 45 0 s 9.233 3.067 10.964 7.546 c 10.171 3.482 16.298 11.671 18.214 24.352 c 0.245 2.409 0.416 4.996 0.6 7.736 c 0.723 10.857 1.624 24.368 7.168 26.893 c 1.255 0.544 2.313 1.102 3.21 1.696 c 1.279 0.846 1.842 2.4 1.4 3.868 C 86.114 73.56 84.785 74.548 83.25 74.548 z M 45 2.934 c -3.818 0 -7.279 2.556 -8.416 6.215 l -0.228 0.733 l -0.732 0.231 c -9.568 3.018 -15.096 10.287 -16.9 22.224 c -0.221 2.216 -0.392 4.779 -0.573 7.493 c -0.816 12.242 -1.74 26.117 -8.88 29.368 c -1.129 0.49 -2.064 0.982 -2.806 1.473 c -0.265 0.175 -0.26 0.409 -0.21 0.575 c 0.051 0.168 0.177 0.368 0.496 0.368 h 76.5 c 0.318 0 0.445 -0.2 0.496 -0.368 c 0.05 -0.166 0.054 -0.4 -0.209 -0.575 h -0.001 c -0.741 -0.491 -1.677 -0.983 -2.782 -1.462 c -7.163 -3.261 -8.088 -17.137 -8.905 -29.379 c -0.181 -2.714 -0.352 -5.277 -0.582 -7.565 c -1.795 -11.864 -7.323 -19.134 -16.891 -22.151 l -0.732 -0.231 L 53.416 9.15 C 52.279 5.49 48.818 2.934 45 2.934 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 33.257 78.292 C 33.277 84.75 38.536 90 45 90 c 6.463 0 11.723 -5.25 11.743 -11.708 H 33.257 z M 45 87.066 c -3.816 0 -7.063 -2.443 -8.285 -5.843 h 16.57 C 52.063 84.623 48.816 87.066 45 87.066 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <section>
+            <div class="text-4xl md:text-5xl font-bold my-4 mx-auto px-12 md:px-16">
+                <h1 class="w-[28vw]">Books Inventory.</h1>
+            </div>
+        </section>
+        
+        <section >
+            
+            <div class="w-full pt-14 px-20 grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-10">
+
+        <!-- Book Component Start   -->
+                <div>
+                    <div class="w-full">
+                        <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                    </div>
+                    <div class="my-4">
+                       <div>
+                            <h3>Book name - </h3>
+                        </div>
+                        <div>
+                            <h3>Expiry date -</h3>
+                        </div> 
+                    </div>
+                    
+                </div>
+        <!-- Book Component End -->
+
+            <div >
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="w-full">
+                    <img class="w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="my-4">
+                <div>
+                        <h3>Book name - </h3>
+                    </div>
+                    <div>
+                        <h3>Expiry date -</h3>
+                    </div> 
+                </div>
+                
+            </div>
+                            
+
+            </div>
+
+        </section>
+    
+    </main>
+
+    <footer class="bottom-0 shrink-0 relative w-full mt-14">
+
+    <div class="bg-black rounded-t-3xl pt-14 pb-6 px-12">
+        
+        <div class="text-white ">
+            <div>
+                <h2 class="text-4xl">The most popular book today.</h2>
+            </div>
+            <div class="my-4">
+                <h3>New Recommendation.</h3>
+            </div>
+            <div class="mb-4 bg-[#0BB927] inline-block rounded-2xl px-3">
+                <h4 class="align-middle">Explore</h4>
+            </div>
+        </div>
+
+        <div class="text-white py-10">
+
+            <div class="relative w-[15rem] mx-auto">
+
+                <div>
+                    <img class="rounded w-full" src="https://picsum.photos/200/300" alt="">
+                </div>
+
+                <div class="absolute bottom-10 w-full px-10">
+                    <p class="text-xl mb-6">How Innovation Works?</p>
+                    <div class="text-sm">
+                        <p >Authors: <span class="underline">Matt Rideley</span></p>
+                        <p >General: <span class="underline">Fantasy, Fiction</span></p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="text-white grid grid-cols-2 place-items-center gap-0 mx-auto">
+            
+            <div class="place-self-end">
+                <img class="w-[6rem] " src="../img/arrowL.svg" alt="">
+            </div>  
+
+            <div class="place-self-start">
+                <img class="w-[6rem] " src="../img/arrowR.svg" alt="">
+            </div>
+
+        </div>
+
+        <div class="text-white text-center mx-auto pt-8 no-underline">
+            <h4>Made with ❤️ by Team <a class="hover:text-blue-600" href="https://digitcrib.com/">DigitCrib</a></h4>
+        </div>
+
+    </div>
+
+
+    </footer>
+</body>
+</html>

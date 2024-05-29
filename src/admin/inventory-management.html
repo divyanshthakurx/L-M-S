@@ -6,7 +6,10 @@
     <title>LMS</title>
     <link rel="stylesheet" href="../output.css">
 </head>
-<body class="m-0 p-0 flex flex-col min-h-screen">
+<body class="m-0 h-full p-0 flex flex-col min-h-screen">
+
+    <!-- navigation header -->
+
     <header>
         <nav class="flex justify-between items-center px-8 py-8 md:px-16 md:py-14">
             <div class="align-middle md:hidden">
@@ -49,7 +52,7 @@
 
             <div class="hidden md:block no-underline font-semibold text-xl">
                 <ul class="flex content-center justify-around cursor-pointer">
-                    <li><a href="../admin/inventory-management.html">Books Inventory</a></li>
+                    <li><a href="../admin/inventory-management.html">Manage Books</a></li>
                     <li><a class="mx-10" href="../admin/user-management.html">Manage User</a></li>
                 </ul>
             </div>
@@ -77,89 +80,97 @@
         </nav>
     </header>
 
+    <!-- main body start here  -->
+
     <main class="flex-1">
 
-        <section>
+        <section class="px-32">
 
-            <div class="flex justify-between px-32">
+            <!-- main container containing book manage form and book section  -->
 
-                <div>
+            <div class="grid grid-cols-2 gap-32 w-full">
 
-                    <div class="text-3xl md:text-4xl font-bold mb-8 mx-auto">
-                        <h1 class="w-[22vw]">Inventory Management.</h1>
+                <!-- book manage form -->
+
+                <div class="w-full flex flex-col justify-between">
+
+                    <div class="text-3xl md:text-5xl font-bold mb-8">
+                        <h1 class="w-fit">Manage Book.</h1>
                     </div>
 
                     <div class="text-xl font-semibold">
                         <form action="">
 
-                            <div class="flex">
-                                <div class="flex flex-col justify-center">
-                                    <label for="">Image URL</label>
-                                    <input class="mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="url">
+                            <div class="flex justify-between">
+                                <div>
+                                    <div class="flex flex-col justify-center">
+                                        <label for="">Image URL</label>
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="url">
+                                    </div>  
+                                    <div>
+                                        <div class="flex flex-col my-4">
+                                            <label for="">Author Name</label>
+                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
+                                        </div>
+    
+                                        <div class="flex flex-col" >
+                                            <label for="">Publisher Name</label>
+                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="flex flex-col ml-14">
+                                
+                                <div class="flex flex-col">
                                     <div class="flex flex-col">
                                         <label for="">Book ID</label>
-                                        <input class="mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" name="Book ID" id="">
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" name="Book ID" id="">
                                     </div>
                                     
                                     <div class="flex flex-col my-4">
                                         <label for="">Book Name</label>
-                                        <input class="mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0] type="text">
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0] type="text">
                                     </div>
 
                                     <div class="flex flex-col">
                                         <label for="">Publish Date</label>
-                                        <input class="mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="date">
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="date">
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="flex my-[1rem]">
+                            <div class="flex my-[1rem] justify-between">
                                 <div>
-                                    <div class="flex flex-col mb-6">
+                                    <div class="flex flex-col">
                                         <label for="">Author Name</label>
-                                        <input class="mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
-                                    </div>
-
-                                    <div class="flex flex-col" >
-                                        <label for="">Publisher Name</label>
-                                        <input class="mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
                                     </div>
                                 </div>
-                                <div class="ml-14">
-                                        <div class="flex flex-col mb-6">
+                                <div class="flex gap-24">
+                                        <div class="flex flex-col">
                                             <label for="">Course</label>
-                                            <select class="mt-2 px-1 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
+                                            <select class="h-10 mt-2 px-1 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
                                                 <option value="bca">BCA</option>
                                                 <option value="bba">BBA</option>
                                             </select>
                                         </div>
 
                                         <div class="flex flex-col">
-
-                                            <div>
-                                                <label for="">In Stock</label>                                          
-                                            </div>
-                                                
-                                            <div class="mt-2">
-                                                <button id="decrease-btn" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2.5 rounded">-</button>
-                                                <span id="stock-value" class="text-xl font-bold">0</span>
-                                                <button id="increase-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded">+</button>
-                                            </div>
+                                            <label for="">In Stock</label>
+                                            <input class="h-10 w-20 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">                                          
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="flex flex-col">
                                     <label for="">Description</label>
-                                    <input class="mt-2 px-2 w-[32vw] h-[20vh] font-normal placeholder:font-normal    placeholder:text-gray-500 border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="Add Description">
+                                    <textarea class="mt-2 px-2 w-full h-[14vh] font-normal placeholder:font-normal placeholder:text-gray-500 border border-black rounded-lg bg-[#F0F0F0]" name="" id=""></textarea>
                                 </div>
                         </form>
                     </div>
 
-                    <div class="my-[3rem]">
+                    <!-- add, update, delete button group -->
+
+                    <div class="mt-6">
                         <div class="text-white flex justify-around">
                             <a class="bg-green-500 px-9 py-2 rounded-xl"  href=""><button>Add</button></a>
                             <a class="bg-blue-500 px-9 py-2 rounded-xl" href=""><button>Update</button></a>
@@ -169,38 +180,140 @@
                                                     
                 </div>
 
-                <div class="w-[46vw]">
-                    <div class="bg-black grid grid-cols-4 gap-4 place-items-center font-semibold text-xl text-white w-full rounded-t-2xl">
-                        <div>Book ID</div>
-                        <div class="justify-self-start">Book Details</div>
-                        <div class="justify-self-end">Book Cover</div>
-                        <div class="w-[1rem]"><svg class="w-6 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 50 50"
-                            style="fill:#FFFFFF;">
-                            <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
-                            </svg></div>
+                <!-- Book section -->
+
+                <div class="w-full">
+                    <div class="bg-black w-full rounded-t-2xl text-white">
+                        <div class="py-6 px-14 flex justify-between items-center">
+                            <div class="font-semibold text-xl w-[10rem]">Search for</div>
+                            <div>
+                                <div class="flex border rounded-xl">
+                                    <div>
+                                        <input class="text-black w-[23rem] h-11 rounded-l-xl px-4" type="search" id="search" name="search" placeholder="book name">
+                                    </div>      
+                                    <div class="w-[2.75rem] p-1 align-middle hover:bg-white rounded-r-xl hover:border-2 border-black">
+                                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 128 128" style="fill:#FFFFFF;">
+                                            <path d="M 52.349609 14.400391 C 42.624609 14.400391 32.9 18.1 25.5 25.5 C 10.7 40.3 10.7 64.399219 25.5 79.199219 C 32.9 86.599219 42.600391 90.300781 52.400391 90.300781 C 62.200391 90.300781 71.900781 86.599219 79.300781 79.199219 C 94.000781 64.399219 93.999219 40.3 79.199219 25.5 C 71.799219 18.1 62.074609 14.400391 52.349609 14.400391 z M 52.300781 20.300781 C 60.500781 20.300781 68.700391 23.399219 74.900391 29.699219 C 87.400391 42.199219 87.4 62.5 75 75 C 62.5 87.5 42.199219 87.5 29.699219 75 C 17.199219 62.5 17.199219 42.199219 29.699219 29.699219 C 35.899219 23.499219 44.100781 20.300781 52.300781 20.300781 z M 52.300781 26.300781 C 45.400781 26.300781 38.9 29 34 34 C 29.3 38.7 26.700391 44.800391 26.400391 51.400391 C 26.300391 53.100391 27.600781 54.4 29.300781 54.5 L 29.400391 54.5 C 31.000391 54.5 32.300391 53.199609 32.400391 51.599609 C 32.600391 46.499609 34.699219 41.799219 38.199219 38.199219 C 41.999219 34.399219 47.000781 32.300781 52.300781 32.300781 C 54.000781 32.300781 55.300781 31.000781 55.300781 29.300781 C 55.300781 27.600781 54.000781 26.300781 52.300781 26.300781 z M 35 64 A 3 3 0 0 0 32 67 A 3 3 0 0 0 35 70 A 3 3 0 0 0 38 67 A 3 3 0 0 0 35 64 z M 83.363281 80.5 C 82.600781 80.5 81.850781 80.800391 81.300781 81.400391 C 80.100781 82.600391 80.100781 84.499609 81.300781 85.599609 L 83.800781 88.099609 C 83.200781 89.299609 82.900391 90.6 82.900391 92 C 82.900391 94.4 83.8 96.700391 85.5 98.400391 L 98.300781 111 C 100.10078 112.8 102.39922 113.69922 104.69922 113.69922 C 106.99922 113.69922 109.29961 112.79961 111.09961 111.09961 C 114.59961 107.59961 114.59961 101.90039 111.09961 98.400391 L 98.300781 85.599609 C 96.600781 83.899609 94.300391 83 91.900391 83 C 90.500391 83 89.2 83.300391 88 83.900391 L 85.5 81.400391 C 84.9 80.800391 84.125781 80.5 83.363281 80.5 z M 91.900391 88.900391 C 92.700391 88.900391 93.5 89.200781 94 89.800781 L 106.69922 102.5 C 107.89922 103.7 107.89922 105.59922 106.69922 106.69922 C 105.49922 107.89922 103.6 107.89922 102.5 106.69922 L 89.800781 94.099609 C 89.200781 93.499609 88.900391 92.700391 88.900391 91.900391 C 88.900391 91.100391 89.200781 90.300781 89.800781 89.800781 C 90.400781 89.200781 91.100391 88.900391 91.900391 88.900391 z"></path>
+                                        </svg>
+                                    </div>
+                                </div>                              
+                            </div>
+                        </div>
+                        <div class="p-6 border grid grid-cols-3 gap-4 place-items-center font-semibold text-xl">
+                            <div class="justify-self-end mr-8">Book Cover</div>
+                            <div class="justify-self-end">Book Details</div>
+                            <div class=" justify-self-end border-white rounded-xl px-4 py-1">
+                                <label for="">Course:</label>
+                                <select class="px-1 font-normal border border-black rounded-lg text-white bg-[#000000] " name="books" id="books">
+                                    <option value="bca">BCA</option>
+                                    <option value="bba">BBA</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-[#F0F0F0] w-full">
+                    <div class="bg-[#F0F0F0] w-full rounded-b-2xl overflow-y-auto h-[30.25rem] pt-6 px-6">
                         <div class="flex justify-around">
-                            <div class="my-6 grid grid-cols-4 gap-4 place-items-center place-content-center	">
-                                <div class="font-semibold">
-                                    <div>A01</div>
-                                </div>                           
+                            <div class="mb-6 grid grid-cols-2 gap-1 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
                                 <div>
                                     <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
                                         <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
                                         <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
                                         <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
                                     </div>
-                                    <div class="flex justify-between mt-6">
+                                    <div class="text-xl flex justify-between mt-4">
                                         <div class="font-semibold">BCA</div>
                                         <div>Stock Available: <span class="font-semibold">10</span></div>
                                     </div>
                                 </div>
-                                <div class="col-span-2">
-                                    <img class="rounded-md" src="https://picsum.photos/200/300" alt="">
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
                                 </div>
                             </div>      
                         </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+
+
                     </div>
                 </div>
 
@@ -208,64 +321,7 @@
 
         </section>
         
-    </main>
-
-    <footer class="bottom-0 shrink-0 relative w-full mt-14">
-
-    <div class="bg-black rounded-t-3xl pt-14 pb-6 px-12">
-        
-        <div class="text-white ">
-            <div>
-                <h2 class="text-4xl">The most popular book today.</h2>
-            </div>
-            <div class="my-4">
-                <h3>New Recommendation.</h3>
-            </div>
-            <div class="mb-4 bg-[#0BB927] inline-block rounded-2xl px-3">
-                <h4 class="align-middle">Explore</h4>
-            </div>
-        </div>
-
-        <div class="text-white py-10">
-
-            <div class="relative w-[15rem] mx-auto">
-
-                <div>
-                    <img class="rounded w-full" src="https://picsum.photos/200/300" alt="">
-                </div>
-
-                <div class="absolute bottom-10 w-full px-10">
-                    <p class="text-xl mb-6">How Innovation Works?</p>
-                    <div class="text-sm">
-                        <p >Authors: <span class="underline">Matt Rideley</span></p>
-                        <p >General: <span class="underline">Fantasy, Fiction</span></p>
-                    </div>
-                </div>
-                
-            </div>
-
-        </div>
-
-        <div class="text-white grid grid-cols-2 place-items-center gap-0 mx-auto">
-            
-            <div class="place-self-end">
-                <img class="w-[6rem] " src="../img/arrowL.svg" alt="">
-            </div>  
-
-            <div class="place-self-start">
-                <img class="w-[6rem] " src="../img/arrowR.svg" alt="">
-            </div>
-
-        </div>
-
-        <div class="text-white text-center mx-auto pt-8 no-underline">
-            <h4>Made with ❤️ by Team <a class="hover:text-blue-600" href="https://digitcrib.com/">DigitCrib</a></h4>
-        </div>
-
-    </div>
-
-
-    </footer>
+</main>
 
     <script src="./script.js"></script>
 

@@ -52,8 +52,9 @@
 
             <div class="hidden md:block no-underline font-semibold text-xl">
                 <ul class="flex content-center justify-around cursor-pointer">
-                    <li><a href="../admin/book-management.html">Manage Book</a></li>
-                    <li><a class="mx-10" href="../admin/user-management.html">Manage User</a></li>
+                    <li><a class="mr-10" href="../admin/book-management.html">Manage Book</a></li>
+                    <li><a class="mr-10" href="../admin/user-management.html">Manage User</a></li>
+                    <li><a class="mr-10" href="../admin/history.html">History</a></li>
                 </ul>
             </div>
 
@@ -67,7 +68,7 @@
                     </g>
                 </svg> -->
 
-                <a href="./notifications.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+                <!-- <a href="./notifications.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
 
                     <defs>
                     </defs>
@@ -75,7 +76,12 @@
                         <path d="M 83.25 74.548 H 6.75 c -1.536 0 -2.864 -0.988 -3.306 -2.457 c -0.441 -1.468 0.122 -3.022 1.401 -3.868 c 0.896 -0.594 1.954 -1.152 3.233 -1.707 c 5.52 -2.514 6.42 -16.025 7.144 -26.882 c 0.182 -2.74 0.355 -5.327 0.59 -7.664 c 1.926 -12.752 8.052 -20.942 18.223 -24.424 C 35.767 3.067 40.169 0 45 0 s 9.233 3.067 10.964 7.546 c 10.171 3.482 16.298 11.671 18.214 24.352 c 0.245 2.409 0.416 4.996 0.6 7.736 c 0.723 10.857 1.624 24.368 7.168 26.893 c 1.255 0.544 2.313 1.102 3.21 1.696 c 1.279 0.846 1.842 2.4 1.4 3.868 C 86.114 73.56 84.785 74.548 83.25 74.548 z M 45 2.934 c -3.818 0 -7.279 2.556 -8.416 6.215 l -0.228 0.733 l -0.732 0.231 c -9.568 3.018 -15.096 10.287 -16.9 22.224 c -0.221 2.216 -0.392 4.779 -0.573 7.493 c -0.816 12.242 -1.74 26.117 -8.88 29.368 c -1.129 0.49 -2.064 0.982 -2.806 1.473 c -0.265 0.175 -0.26 0.409 -0.21 0.575 c 0.051 0.168 0.177 0.368 0.496 0.368 h 76.5 c 0.318 0 0.445 -0.2 0.496 -0.368 c 0.05 -0.166 0.054 -0.4 -0.209 -0.575 h -0.001 c -0.741 -0.491 -1.677 -0.983 -2.782 -1.462 c -7.163 -3.261 -8.088 -17.137 -8.905 -29.379 c -0.181 -2.714 -0.352 -5.277 -0.582 -7.565 c -1.795 -11.864 -7.323 -19.134 -16.891 -22.151 l -0.732 -0.231 L 53.416 9.15 C 52.279 5.49 48.818 2.934 45 2.934 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                         <path d="M 33.257 78.292 C 33.277 84.75 38.536 90 45 90 c 6.463 0 11.723 -5.25 11.743 -11.708 H 33.257 z M 45 87.066 c -3.816 0 -7.063 -2.443 -8.285 -5.843 h 16.57 C 52.063 84.623 48.816 87.066 45 87.066 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                     </g>
-                </svg></a>
+                </svg></a> -->
+            <div>
+                <a class="text-lg font-semibold text-[#C21717] bg-[#F0F0F0] border hover:bg-[#C21717] hover:text-[#F0F0F0] align-middle px-4 py-2 rounded-full " href="#">
+                    Log Out
+                </a>
+            </div>
             </div>
         </nav>
     </header>
@@ -96,10 +102,10 @@
 
                 <!-- book manage form -->
 
-                <div class="w-full flex flex-col justify-between">
+                <div class="w-full flex flex-col ">
 
                     <div class="text-3xl md:text-5xl font-bold mb-8">
-                        <h1 class="w-fit">Manage Book.</h1>
+                        <h1 class="w-fit">Manage User.</h1>
                     </div>
 
                     <div class="text-xl font-semibold">
@@ -107,70 +113,73 @@
 
                             <div class="flex justify-between">
                                 <div>
-                                    <div class="flex flex-col justify-center">
-                                        <label for="">Image URL</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="url">
-                                    </div>  
-                                    <div>
-                                        <div class="flex flex-col my-4">
-                                            <label for="">Author Name</label>
-                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
-                                        </div>
-    
-                                        <div class="flex flex-col" >
-                                            <label for="">Publisher Name</label>
-                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex flex-col">
-                                    <div class="flex flex-col">
-                                        <label for="">Book ID</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" name="Book ID" id="">
-                                    </div>
                                     
-                                    <div class="flex flex-col my-4">
-                                        <label for="">Book Name</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0] type="text">
-                                    </div>
-
-                                    <div class="flex flex-col">
-                                        <label for="">Publish Date</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="date">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="flex my-[1rem] justify-between">
-                                <div>
-                                    <div class="flex flex-col">
-                                        <label for="">Author Name</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
-                                    </div>
-                                </div>
-                                <div class="flex gap-24">
+                                    <div>
                                         <div class="flex flex-col">
+                                            <div class="self-center w-[4.75rem] h-[4.75rem]"><img src="https://img.icons8.com/?size=100&id=85147&format=png&color=000000" alt="user avatar"></div>
+                                        </div>
+
+                                        <div class="flex flex-col my-4">
+                                            <label for="">Student Name</label>
+                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
+                                        </div>
+                                        
+                                        <div class="flex flex-col mb-4">
                                             <label for="">Course</label>
                                             <select class="h-10 mt-2 px-1 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
+                                                <option value="bba">All</option>
                                                 <option value="bca">BCA</option>
                                                 <option value="bba">BBA</option>
                                             </select>
                                         </div>
 
                                         <div class="flex flex-col">
-                                            <label for="">In Stock</label>
-                                            <input class="h-10 w-20 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">                                          
+                                            <label for="">Fine</label>
+                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="number" >
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div class="flex flex-col">
-                                    <label for="">Description</label>
-                                    <textarea class="mt-2 px-2 w-full h-[14vh] font-normal placeholder:font-normal placeholder:text-gray-500 border border-black rounded-lg bg-[#F0F0F0]" name="" id=""></textarea>
+                                    <div class="flex flex-col mb-4">
+                                        <label for="">User ID</label>
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="number" name="Book ID" id="">
+                                    </div>  
+
+                                    <div class="flex flex-col mb-4">
+                                        <label for="">Class Roll Number</label>
+                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text">
+                                    </div>
+                                    
+                                    <div class="flex flex-col mb-4">
+                                            <label for="">Password</label>
+                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="date">
+                                        </div> 
+
+                                    <div class="flex flex-col">
+                                        <label for="">Year</label>
+                                        <select class="h-10 mt-2 px-1 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="flex flex-col my-4">
+                                <div class="flex justify-between">
+                                    <div><label for="">Issued Books</label></div>
+                                    <div><a href="./issue-book.html"><h1>&#9998;edit</h1></a></div>
+                                </div>
+                                
+                                <textarea class="h-20 w-full mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text"" name="" id=""></textarea>
+                            </div>
+                        
                         </form>
                     </div>
+
+
 
                     <!-- add, update, delete button group -->
 
@@ -180,11 +189,10 @@
                             <a class="bg-blue-500 px-9 py-2 rounded-xl" href=""><button>Update</button></a>
                             <a class="bg-red-500 px-9 py-2 rounded-xl   " href=""><button>Delete</button></a>
                         </div>
-                    </div>      
-                                                    
+                    </div>                                                          
                 </div>
 
-                <!-- Book section -->
+                <!-- User section -->
 
                 <div class="w-full">
                     <div class="bg-black w-full rounded-t-2xl text-white">
@@ -203,10 +211,9 @@
                                 </div>                              
                             </div>
                         </div>
-                        <div class="p-6 border grid grid-cols-3 gap-4 place-items-center font-semibold text-xl">
-                            <div class="justify-self-end mr-8">Book Cover</div>
-                            <div class="justify-self-end">Book Details</div>
-                            <div class=" justify-self-end border-white rounded-xl px-4 py-1">
+                        <div class="p-6 border grid grid-cols-2 place-items-center font-semibold text-xl">
+                            <div class="justify-self-center">User Details</div>
+                            <div class=" justify-self-center border-white rounded-xl px-4 py-1">
                                 <label for="">Course:</label>
                                 <select class="px-1 font-normal border border-black rounded-lg text-white bg-[#000000] " name="books" id="books">
                                     <option value="bca">BCA</option>
@@ -216,105 +223,85 @@
                         </div>
                     </div>
                     <div class="bg-[#F0F0F0] w-full rounded-b-2xl overflow-y-auto h-[30.25rem] pt-6 px-6">
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-1 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                        <div class="mb-6 flex flex-col justify-around border border-gray-500 rounded-xl p-6">
+                            <div class="grid grid-cols-2 gap-1 place-items-center place-content-center"> 
+                                <div class="flex flex-col gap-3">
+                                    <div class="self-center"><img src="https://img.icons8.com/?size=120&id=85147&format=png&color=000000" alt=""></div>  
+                                    <div class="justify-end ">
+                                        <div class="grid grid-cols-2 text-lg">
+                                            <div>Issued Books: <span class="font-semibold">5</span> </div>
+                                            <div class="justify-self-end">Fine: <span class="font-semibold">&#x20b9;<span>500</span></span> </div>
+                                        </div>
+                                    </div>                              
                                 </div>                          
                                 <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    <div class="text-xl">
+                                        <div >User ID: <span class="font-semibold underline">47365278</span></div>
+                                        <div class=" my-4">Name: <span class="font-semibold">Divyansh Thakur</span></div>
+                                        <div>Class Roll No: <span class="font-semibold">2602</span></div>
                                     </div>
-                                    <div class="text-xl flex justify-between mt-4">
+                                    <div class="text-lg flex justify-between mt-4">
                                         <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                        <div>Year: <span class="font-semibold">2</span></div>   
                                     </div>
                                 </div>
-                            </div>      
+                            </div>                               
                         </div>
 
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                        <div class="mb-6 flex flex-col justify-around border border-gray-500 rounded-xl p-6">
+                            <div class="grid grid-cols-2 gap-1 place-items-center place-content-center"> 
+                                <div class="flex flex-col gap-3">
+                                    <div class="self-center"><img src="https://img.icons8.com/?size=120&id=85147&format=png&color=000000" alt=""></div>  
+                                    <div class="justify-end ">
+                                        <div class="grid grid-cols-2 text-lg">
+                                            <div>Issued Books: <span class="font-semibold">5</span> </div>
+                                            <div class="justify-self-end">Fine: <span class="font-semibold">&#x20b9;<span>500</span></span> </div>
+                                        </div>
+                                    </div>                              
                                 </div>                          
                                 <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    <div class="text-xl">
+                                        <div >User ID: <span class="font-semibold underline">47365278</span></div>
+                                        <div class=" my-4">Name: <span class="font-semibold">Divyansh Thakur</span></div>
+                                        <div>Class Roll No: <span class="font-semibold">2602</span></div>
                                     </div>
-                                    <div class="text-xl flex justify-between mt-4">
+                                    <div class="text-lg flex justify-between mt-4">
                                         <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                        <div>Year: <span class="font-semibold">2</span></div>   
                                     </div>
                                 </div>
-                            </div>      
+                            </div>                               
                         </div>
 
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                        <div class="mb-6 flex flex-col justify-around border border-gray-500 rounded-xl p-6">
+                            <div class="grid grid-cols-2 gap-1 place-items-center place-content-center"> 
+                                <div class="flex flex-col gap-3">
+                                    <div class="self-center"><img src="https://img.icons8.com/?size=120&id=85147&format=png&color=000000" alt=""></div>  
+                                    <div class="justify-end ">
+                                        <div class="grid grid-cols-2 text-lg">
+                                            <div>Issued Books: <span class="font-semibold">5</span> </div>
+                                            <div class="justify-self-end">Fine: <span class="font-semibold">&#x20b9;<span>500</span></span> </div>
+                                        </div>
+                                    </div>                              
                                 </div>                          
                                 <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    <div class="text-xl">
+                                        <div >User ID: <span class="font-semibold underline">47365278</span></div>
+                                        <div class=" my-4">Name: <span class="font-semibold">Divyansh Thakur</span></div>
+                                        <div>Class Roll No: <span class="font-semibold">2602</span></div>
                                     </div>
-                                    <div class="text-xl flex justify-between mt-4">
+                                    <div class="text-lg flex justify-between mt-4">
                                         <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                        <div>Year: <span class="font-semibold">2</span></div>   
                                     </div>
                                 </div>
-                            </div>      
+                            </div>                               
                         </div>
 
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-xl flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
-                                    </div>
-                                </div>
-                            </div>      
-                        </div>
+                        
+                        
 
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-xl flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
-                                    </div>
-                                </div>
-                            </div>      
-                        </div>
+                        
 
 
 

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body class="m-0 h-full p-0 flex flex-col min-h-screen">
+
+    <!-- navigation header -->
+
+    <header>
+        <nav class="flex justify-between items-center px-8 py-8 md:px-16 md:py-8">
+            <div class="align-middle md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="45" height="45" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 88 19.229 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 19.229 88 19.229 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 88 47 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 47 88 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 88 74.771 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 74.771 88 74.771 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 9.574 26.802 C 4.295 26.802 0 22.507 0 17.229 c 0 -5.279 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 C 19.148 22.507 14.853 26.802 9.574 26.802 z M 9.574 11.654 C 6.5 11.654 4 14.155 4 17.229 c 0 3.073 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.5 5.574 -5.574 C 15.148 14.155 12.647 11.654 9.574 11.654 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 9.574 54.574 C 4.295 54.574 0 50.279 0 45 s 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 S 14.853 54.574 9.574 54.574 z M 9.574 39.426 C 6.5 39.426 4 41.926 4 45 c 0 3.073 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.501 5.574 -5.574 C 15.148 41.926 12.647 39.426 9.574 39.426 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 9.574 82.346 C 4.295 82.346 0 78.051 0 72.771 s 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 S 14.853 82.346 9.574 82.346 z M 9.574 67.197 C 6.5 67.197 4 69.698 4 72.771 s 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.501 5.574 -5.574 S 12.647 67.197 9.574 67.197 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden md:block">
+                <a href="./books-issued.html"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 79.635 73.696 C 86.104 65.901 90 55.898 90 45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 c 0 10.898 3.896 20.901 10.365 28.696 c 0.105 0.161 0.227 0.315 0.383 0.445 c 0.002 0.002 0.005 0.003 0.007 0.005 C 19.015 83.837 31.298 90 45 90 c 13.702 0 25.985 -6.163 34.245 -15.854 c 0.003 -0.002 0.005 -0.003 0.008 -0.005 C 79.408 74.01 79.53 73.857 79.635 73.696 z M 45 4 c 22.607 0 41 18.393 41 41 c 0 9.169 -3.026 17.645 -8.132 24.482 c -6.081 -6.505 -13.876 -10.99 -22.402 -13.023 c 6.497 -3.669 10.901 -10.629 10.901 -18.609 c 0 -11.782 -9.585 -21.367 -21.367 -21.367 c -11.782 0 -21.367 9.585 -21.367 21.367 c 0 7.979 4.404 14.939 10.901 18.608 c -8.526 2.033 -16.321 6.518 -22.402 13.023 C 7.026 62.645 4 54.169 4 45 C 4 22.393 22.393 4 45 4 z M 45 55.217 c -9.576 0 -17.367 -7.791 -17.367 -17.367 S 35.424 20.482 45 20.482 s 17.367 7.791 17.367 17.367 S 54.576 55.217 45 55.217 z M 45 86 c -11.986 0 -22.787 -5.171 -30.29 -13.399 C 22.48 64.079 33.418 59.217 45 59.217 c 11.581 0 22.52 4.863 30.29 13.384 C 67.787 80.829 56.986 86 45 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg></a>
+            </div>
+
+            <!-- <div class="align-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 3 90 c -0.768 0 -1.536 -0.293 -2.121 -0.879 c -1.172 -1.171 -1.172 -3.071 0 -4.242 l 84 -84 c 1.172 -1.172 3.07 -1.172 4.242 0 c 1.172 1.171 1.172 3.071 0 4.242 l -84 84 C 4.536 89.707 3.768 90 3 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 87 90 c -0.768 0 -1.535 -0.293 -2.121 -0.879 l -84 -84 c -1.172 -1.171 -1.172 -3.071 0 -4.242 c 1.171 -1.172 3.071 -1.172 4.242 0 l 84 84 c 1.172 1.171 1.172 3.071 0 4.242 C 88.535 89.707 87.768 90 87 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                    </svg>
+            </div> -->
+
+            <div class="hidden md:block no-underline font-semibold text-xl">
+                <ul class="flex content-center justify-around cursor-pointer">
+                    <li><a class="mr-10" href="../admin/book-management.html">Manage Book</a></li>
+                    <li><a class="mr-10" href="../admin/user-management.html">Manage User</a></li>
+                    <li><a class="mr-10" href="../admin/history.html">History</a></li>
+                </ul>
+            </div>
+
+            <div class="align-middle">
+                <!-- <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 79.635 73.696 C 86.104 65.901 90 55.898 90 45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 c 0 10.898 3.896 20.901 10.365 28.696 c 0.105 0.161 0.227 0.315 0.383 0.445 c 0.002 0.002 0.005 0.003 0.007 0.005 C 19.015 83.837 31.298 90 45 90 c 13.702 0 25.985 -6.163 34.245 -15.854 c 0.003 -0.002 0.005 -0.003 0.008 -0.005 C 79.408 74.01 79.53 73.857 79.635 73.696 z M 45 4 c 22.607 0 41 18.393 41 41 c 0 9.169 -3.026 17.645 -8.132 24.482 c -6.081 -6.505 -13.876 -10.99 -22.402 -13.023 c 6.497 -3.669 10.901 -10.629 10.901 -18.609 c 0 -11.782 -9.585 -21.367 -21.367 -21.367 c -11.782 0 -21.367 9.585 -21.367 21.367 c 0 7.979 4.404 14.939 10.901 18.608 c -8.526 2.033 -16.321 6.518 -22.402 13.023 C 7.026 62.645 4 54.169 4 45 C 4 22.393 22.393 4 45 4 z M 45 55.217 c -9.576 0 -17.367 -7.791 -17.367 -17.367 S 35.424 20.482 45 20.482 s 17.367 7.791 17.367 17.367 S 54.576 55.217 45 55.217 z M 45 86 c -11.986 0 -22.787 -5.171 -30.29 -13.399 C 22.48 64.079 33.418 59.217 45 59.217 c 11.581 0 22.52 4.863 30.29 13.384 C 67.787 80.829 56.986 86 45 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg> -->
+
+                <!-- <a href="./notifications.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 83.25 74.548 H 6.75 c -1.536 0 -2.864 -0.988 -3.306 -2.457 c -0.441 -1.468 0.122 -3.022 1.401 -3.868 c 0.896 -0.594 1.954 -1.152 3.233 -1.707 c 5.52 -2.514 6.42 -16.025 7.144 -26.882 c 0.182 -2.74 0.355 -5.327 0.59 -7.664 c 1.926 -12.752 8.052 -20.942 18.223 -24.424 C 35.767 3.067 40.169 0 45 0 s 9.233 3.067 10.964 7.546 c 10.171 3.482 16.298 11.671 18.214 24.352 c 0.245 2.409 0.416 4.996 0.6 7.736 c 0.723 10.857 1.624 24.368 7.168 26.893 c 1.255 0.544 2.313 1.102 3.21 1.696 c 1.279 0.846 1.842 2.4 1.4 3.868 C 86.114 73.56 84.785 74.548 83.25 74.548 z M 45 2.934 c -3.818 0 -7.279 2.556 -8.416 6.215 l -0.228 0.733 l -0.732 0.231 c -9.568 3.018 -15.096 10.287 -16.9 22.224 c -0.221 2.216 -0.392 4.779 -0.573 7.493 c -0.816 12.242 -1.74 26.117 -8.88 29.368 c -1.129 0.49 -2.064 0.982 -2.806 1.473 c -0.265 0.175 -0.26 0.409 -0.21 0.575 c 0.051 0.168 0.177 0.368 0.496 0.368 h 76.5 c 0.318 0 0.445 -0.2 0.496 -0.368 c 0.05 -0.166 0.054 -0.4 -0.209 -0.575 h -0.001 c -0.741 -0.491 -1.677 -0.983 -2.782 -1.462 c -7.163 -3.261 -8.088 -17.137 -8.905 -29.379 c -0.181 -2.714 -0.352 -5.277 -0.582 -7.565 c -1.795 -11.864 -7.323 -19.134 -16.891 -22.151 l -0.732 -0.231 L 53.416 9.15 C 52.279 5.49 48.818 2.934 45 2.934 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 33.257 78.292 C 33.277 84.75 38.536 90 45 90 c 6.463 0 11.723 -5.25 11.743 -11.708 H 33.257 z M 45 87.066 c -3.816 0 -7.063 -2.443 -8.285 -5.843 h 16.57 C 52.063 84.623 48.816 87.066 45 87.066 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg></a> -->
+                <div>
+                    <a class="text-lg font-semibold text-[#C21717] bg-[#F0F0F0] border hover:bg-[#C21717] hover:text-[#F0F0F0] align-middle px-4 py-2 rounded-full " href="#">
+                        Log Out
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- horizontal rule -->
+
+    <hr class="mx-auto w-[85%] bg-gray-200 h-[2px]">
+
+    <!-- main body start here  -->
+
+    <main class="flex-1 py-12">
+
+        <section class="px-32 ">
+
+            <!-- main container containing book manage form and book section  -->
+
+            <div class="grid grid-cols-2 gap-32 w-full">
+
+                <!-- book manage form -->
+
+                <div class="w-full flex flex-col justify-between">
+
+                    <div class="text-3xl md:text-5xl font-bold mb-8">
+                        <h1 class="w-fit">Issue Book.</h1>
+                    </div>
+
+                    <div class="text-xl font-semibold">
+                        
+                        
+
+                    </div>
+
+                    <!-- add, update, delete button group
+
+                    <div class="mt-6">
+                        <div class="text-white flex justify-around">
+                            <a class="bg-green-500 px-9 py-2 rounded-xl"  href=""><button>Add</button></a>
+                            <a class="bg-blue-500 px-9 py-2 rounded-xl" href=""><button>Update</button></a>
+                            <a class="bg-red-500 px-9 py-2 rounded-xl   " href=""><button>Delete</button></a>
+                        </div>
+                    </div>       -->
+                                                    
+                </div>
+
+                <!-- Book section -->
+
+                <div class="w-full">
+                    <div class="bg-black w-full rounded-t-2xl text-white">
+                        <div class="py-6 px-14 flex justify-between items-center">
+                            <div class="font-semibold text-xl w-[10rem]">Search for</div>
+                            <div>
+                                <div class="flex border rounded-xl">
+                                    <div>
+                                        <input class="text-black w-[23rem] h-11 rounded-l-xl px-4" type="search" id="search" name="search" placeholder="book name">
+                                    </div>      
+                                    <div class="w-[2.75rem] p-1 align-middle hover:bg-white rounded-r-xl hover:border-2 border-black">
+                                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 128 128" style="fill:#FFFFFF;">
+                                            <path d="M 52.349609 14.400391 C 42.624609 14.400391 32.9 18.1 25.5 25.5 C 10.7 40.3 10.7 64.399219 25.5 79.199219 C 32.9 86.599219 42.600391 90.300781 52.400391 90.300781 C 62.200391 90.300781 71.900781 86.599219 79.300781 79.199219 C 94.000781 64.399219 93.999219 40.3 79.199219 25.5 C 71.799219 18.1 62.074609 14.400391 52.349609 14.400391 z M 52.300781 20.300781 C 60.500781 20.300781 68.700391 23.399219 74.900391 29.699219 C 87.400391 42.199219 87.4 62.5 75 75 C 62.5 87.5 42.199219 87.5 29.699219 75 C 17.199219 62.5 17.199219 42.199219 29.699219 29.699219 C 35.899219 23.499219 44.100781 20.300781 52.300781 20.300781 z M 52.300781 26.300781 C 45.400781 26.300781 38.9 29 34 34 C 29.3 38.7 26.700391 44.800391 26.400391 51.400391 C 26.300391 53.100391 27.600781 54.4 29.300781 54.5 L 29.400391 54.5 C 31.000391 54.5 32.300391 53.199609 32.400391 51.599609 C 32.600391 46.499609 34.699219 41.799219 38.199219 38.199219 C 41.999219 34.399219 47.000781 32.300781 52.300781 32.300781 C 54.000781 32.300781 55.300781 31.000781 55.300781 29.300781 C 55.300781 27.600781 54.000781 26.300781 52.300781 26.300781 z M 35 64 A 3 3 0 0 0 32 67 A 3 3 0 0 0 35 70 A 3 3 0 0 0 38 67 A 3 3 0 0 0 35 64 z M 83.363281 80.5 C 82.600781 80.5 81.850781 80.800391 81.300781 81.400391 C 80.100781 82.600391 80.100781 84.499609 81.300781 85.599609 L 83.800781 88.099609 C 83.200781 89.299609 82.900391 90.6 82.900391 92 C 82.900391 94.4 83.8 96.700391 85.5 98.400391 L 98.300781 111 C 100.10078 112.8 102.39922 113.69922 104.69922 113.69922 C 106.99922 113.69922 109.29961 112.79961 111.09961 111.09961 C 114.59961 107.59961 114.59961 101.90039 111.09961 98.400391 L 98.300781 85.599609 C 96.600781 83.899609 94.300391 83 91.900391 83 C 90.500391 83 89.2 83.300391 88 83.900391 L 85.5 81.400391 C 84.9 80.800391 84.125781 80.5 83.363281 80.5 z M 91.900391 88.900391 C 92.700391 88.900391 93.5 89.200781 94 89.800781 L 106.69922 102.5 C 107.89922 103.7 107.89922 105.59922 106.69922 106.69922 C 105.49922 107.89922 103.6 107.89922 102.5 106.69922 L 89.800781 94.099609 C 89.200781 93.499609 88.900391 92.700391 88.900391 91.900391 C 88.900391 91.100391 89.200781 90.300781 89.800781 89.800781 C 90.400781 89.200781 91.100391 88.900391 91.900391 88.900391 z"></path>
+                                        </svg>
+                                    </div>
+                                </div>                              
+                            </div>
+                        </div>
+                        <div class="p-6 border grid grid-cols-3 gap-4 place-items-center font-semibold text-xl">
+                            <div class="justify-self-end mr-8">Book Cover</div>
+                            <div class="justify-self-end">Book Details</div>
+                            <div class=" justify-self-end border-white rounded-xl px-4 py-1">
+                                <label for="">Course:</label>
+                                <select class="px-1 font-normal border border-black rounded-lg text-white bg-[#000000] " name="books" id="books">
+                                    <option value="bca">BCA</option>
+                                    <option value="bba">BBA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#F0F0F0] w-full rounded-b-2xl overflow-y-auto h-[30.25rem] pt-6 px-6">
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-1 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl my-4">Human Resource Development</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-lg flex justify-between mt-4">
+                                       <div>Pages: <span class="font-semibold">665</span></div>
+                                       <div>Year: <span class="font-semibold">1999</span></div>
+                                    </div>
+                                    <div class="text-lg flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>In Stock: <span class="font-semibold">10</span></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="flex justify-around">
+                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
+                                <div class="justify-self-start">
+                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
+                                </div>                          
+                                <div>
+                                    <div>
+                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
+                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
+                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
+                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
+                                    </div>
+                                    <div class="text-xl flex justify-between mt-4">
+                                        <div class="font-semibold">BCA</div>
+                                        <div>Stock Available: <span class="font-semibold">10</span></div>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        
+</main>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

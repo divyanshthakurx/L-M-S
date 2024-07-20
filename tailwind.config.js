@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: { 
     extend: {
+      animation: {
+        'ping-slow': 'ping 2s infinite',
+      },
       backgroundImage: {
         'hero-pattern': "ur')",
       },
@@ -19,5 +25,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

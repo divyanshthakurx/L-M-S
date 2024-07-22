@@ -1,280 +1,575 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS</title>
-    <link rel="stylesheet" href="../output.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+	<link href="../output.css" rel="stylesheet">
+	<title>UCBS Almanac</title> 
 </head>
-<body class="m-0 h-full p-0 flex flex-col min-h-screen">
+<body>
 
-    <!-- navigation header -->
-
-    <header>
-        <nav class="flex justify-between items-center px-8 py-8 md:px-16 md:py-8">
-            <div class="align-middle md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="45" height="45" viewBox="0 0 256 256" xml:space="preserve">
-
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 88 19.229 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 19.229 88 19.229 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 88 47 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 47 88 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 88 74.771 H 29.664 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 S 89.104 74.771 88 74.771 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 9.574 26.802 C 4.295 26.802 0 22.507 0 17.229 c 0 -5.279 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 C 19.148 22.507 14.853 26.802 9.574 26.802 z M 9.574 11.654 C 6.5 11.654 4 14.155 4 17.229 c 0 3.073 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.5 5.574 -5.574 C 15.148 14.155 12.647 11.654 9.574 11.654 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 9.574 54.574 C 4.295 54.574 0 50.279 0 45 s 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 S 14.853 54.574 9.574 54.574 z M 9.574 39.426 C 6.5 39.426 4 41.926 4 45 c 0 3.073 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.501 5.574 -5.574 C 15.148 41.926 12.647 39.426 9.574 39.426 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 9.574 82.346 C 4.295 82.346 0 78.051 0 72.771 s 4.295 -9.574 9.574 -9.574 c 5.279 0 9.574 4.295 9.574 9.574 S 14.853 82.346 9.574 82.346 z M 9.574 67.197 C 6.5 67.197 4 69.698 4 72.771 s 2.5 5.574 5.574 5.574 c 3.073 0 5.574 -2.501 5.574 -5.574 S 12.647 67.197 9.574 67.197 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
-            </div>
-            <div class="hidden md:block">
-                <a href="./books-issued.html"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
-
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 79.635 73.696 C 86.104 65.901 90 55.898 90 45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 c 0 10.898 3.896 20.901 10.365 28.696 c 0.105 0.161 0.227 0.315 0.383 0.445 c 0.002 0.002 0.005 0.003 0.007 0.005 C 19.015 83.837 31.298 90 45 90 c 13.702 0 25.985 -6.163 34.245 -15.854 c 0.003 -0.002 0.005 -0.003 0.008 -0.005 C 79.408 74.01 79.53 73.857 79.635 73.696 z M 45 4 c 22.607 0 41 18.393 41 41 c 0 9.169 -3.026 17.645 -8.132 24.482 c -6.081 -6.505 -13.876 -10.99 -22.402 -13.023 c 6.497 -3.669 10.901 -10.629 10.901 -18.609 c 0 -11.782 -9.585 -21.367 -21.367 -21.367 c -11.782 0 -21.367 9.585 -21.367 21.367 c 0 7.979 4.404 14.939 10.901 18.608 c -8.526 2.033 -16.321 6.518 -22.402 13.023 C 7.026 62.645 4 54.169 4 45 C 4 22.393 22.393 4 45 4 z M 45 55.217 c -9.576 0 -17.367 -7.791 -17.367 -17.367 S 35.424 20.482 45 20.482 s 17.367 7.791 17.367 17.367 S 54.576 55.217 45 55.217 z M 45 86 c -11.986 0 -22.787 -5.171 -30.29 -13.399 C 22.48 64.079 33.418 59.217 45 59.217 c 11.581 0 22.52 4.863 30.29 13.384 C 67.787 80.829 56.986 86 45 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg></a>
-            </div>
-
-            <!-- <div class="align-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve">
-
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 3 90 c -0.768 0 -1.536 -0.293 -2.121 -0.879 c -1.172 -1.171 -1.172 -3.071 0 -4.242 l 84 -84 c 1.172 -1.172 3.07 -1.172 4.242 0 c 1.172 1.171 1.172 3.071 0 4.242 l -84 84 C 4.536 89.707 3.768 90 3 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 87 90 c -0.768 0 -1.535 -0.293 -2.121 -0.879 l -84 -84 c -1.172 -1.171 -1.172 -3.071 0 -4.242 c 1.171 -1.172 3.071 -1.172 4.242 0 l 84 84 c 1.172 1.171 1.172 3.071 0 4.242 C 88.535 89.707 87.768 90 87 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
+    <section>
+        <div class="antialiased bg-gray-50 dark:bg-gray-900">
+            <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+              <div class="flex flex-wrap justify-between items-center">
+                <div class="flex justify-start items-center">
+                  <button
+                    data-drawer-target="drawer-navigation"
+                    data-drawer-toggle="drawer-navigation"
+                    aria-controls="drawer-navigation"
+                    class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                      ></path>
                     </svg>
-            </div> -->
+                    <svg
+                      aria-hidden="true"
+                      class="hidden w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Toggle sidebar</span>
+                  </button>
+                  <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
+                    <img
+                      src="../img/home/ucbs-logo.svg"
+                      class="mr-3 h-8"
+                      alt="LMS Logo"
+                    />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">UCBS LMS</span>
+                  </a>
+                </div>
 
-            <div class="hidden md:block no-underline font-semibold text-xl">
-                <ul class="flex content-center justify-around cursor-pointer">
-                    <li><a class="mr-10" href="../admin/book-management.html">Manage Book</a></li>
-                    <li><a class="mr-10" href="../admin/user-management.html">Manage User</a></li>
-                    <li><a class="mr-10" href="../admin/history.html">History</a></li>
-                </ul>
-            </div>
-
-            <div class="align-middle">
-                <!-- <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
-
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 79.635 73.696 C 86.104 65.901 90 55.898 90 45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 c 0 10.898 3.896 20.901 10.365 28.696 c 0.105 0.161 0.227 0.315 0.383 0.445 c 0.002 0.002 0.005 0.003 0.007 0.005 C 19.015 83.837 31.298 90 45 90 c 13.702 0 25.985 -6.163 34.245 -15.854 c 0.003 -0.002 0.005 -0.003 0.008 -0.005 C 79.408 74.01 79.53 73.857 79.635 73.696 z M 45 4 c 22.607 0 41 18.393 41 41 c 0 9.169 -3.026 17.645 -8.132 24.482 c -6.081 -6.505 -13.876 -10.99 -22.402 -13.023 c 6.497 -3.669 10.901 -10.629 10.901 -18.609 c 0 -11.782 -9.585 -21.367 -21.367 -21.367 c -11.782 0 -21.367 9.585 -21.367 21.367 c 0 7.979 4.404 14.939 10.901 18.608 c -8.526 2.033 -16.321 6.518 -22.402 13.023 C 7.026 62.645 4 54.169 4 45 C 4 22.393 22.393 4 45 4 z M 45 55.217 c -9.576 0 -17.367 -7.791 -17.367 -17.367 S 35.424 20.482 45 20.482 s 17.367 7.791 17.367 17.367 S 54.576 55.217 45 55.217 z M 45 86 c -11.986 0 -22.787 -5.171 -30.29 -13.399 C 22.48 64.079 33.418 59.217 45 59.217 c 11.581 0 22.52 4.863 30.29 13.384 C 67.787 80.829 56.986 86 45 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg> -->
-
-                <!-- <a href="./notifications.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
-
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 83.25 74.548 H 6.75 c -1.536 0 -2.864 -0.988 -3.306 -2.457 c -0.441 -1.468 0.122 -3.022 1.401 -3.868 c 0.896 -0.594 1.954 -1.152 3.233 -1.707 c 5.52 -2.514 6.42 -16.025 7.144 -26.882 c 0.182 -2.74 0.355 -5.327 0.59 -7.664 c 1.926 -12.752 8.052 -20.942 18.223 -24.424 C 35.767 3.067 40.169 0 45 0 s 9.233 3.067 10.964 7.546 c 10.171 3.482 16.298 11.671 18.214 24.352 c 0.245 2.409 0.416 4.996 0.6 7.736 c 0.723 10.857 1.624 24.368 7.168 26.893 c 1.255 0.544 2.313 1.102 3.21 1.696 c 1.279 0.846 1.842 2.4 1.4 3.868 C 86.114 73.56 84.785 74.548 83.25 74.548 z M 45 2.934 c -3.818 0 -7.279 2.556 -8.416 6.215 l -0.228 0.733 l -0.732 0.231 c -9.568 3.018 -15.096 10.287 -16.9 22.224 c -0.221 2.216 -0.392 4.779 -0.573 7.493 c -0.816 12.242 -1.74 26.117 -8.88 29.368 c -1.129 0.49 -2.064 0.982 -2.806 1.473 c -0.265 0.175 -0.26 0.409 -0.21 0.575 c 0.051 0.168 0.177 0.368 0.496 0.368 h 76.5 c 0.318 0 0.445 -0.2 0.496 -0.368 c 0.05 -0.166 0.054 -0.4 -0.209 -0.575 h -0.001 c -0.741 -0.491 -1.677 -0.983 -2.782 -1.462 c -7.163 -3.261 -8.088 -17.137 -8.905 -29.379 c -0.181 -2.714 -0.352 -5.277 -0.582 -7.565 c -1.795 -11.864 -7.323 -19.134 -16.891 -22.151 l -0.732 -0.231 L 53.416 9.15 C 52.279 5.49 48.818 2.934 45 2.934 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 33.257 78.292 C 33.277 84.75 38.536 90 45 90 c 6.463 0 11.723 -5.25 11.743 -11.708 H 33.257 z M 45 87.066 c -3.816 0 -7.063 -2.443 -8.285 -5.843 h 16.57 C 52.063 84.623 48.816 87.066 45 87.066 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg></a> -->
-                <div>
-                    <a class="text-lg font-semibold text-[#C21717] bg-[#F0F0F0] border hover:bg-[#C21717] hover:text-[#F0F0F0] align-middle px-4 py-2 rounded-full " href="#">
-                        Log Out
+                <div class="flex items-center lg:order-2">
+                  <button
+                    type="button"
+                    data-drawer-toggle="drawer-navigation"
+                    aria-controls="drawer-navigation"
+                    class="p-2 mr-1 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  >
+                    <span class="sr-only">Toggle search</span>
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path clip-rule="evenodd" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+                    </svg>
+                  </button>
+                  <!-- Notifications -->
+                  <button
+                    type="button"
+                    data-dropdown-toggle="notification-dropdown"
+                    class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  >
+                    <span class="sr-only">View history</span>
+                    <!-- Bell icon -->
+                    <svg
+                      aria-hidden="true"
+                      class="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded-xl divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700"
+                    id="notification-dropdown"
+                  >
+                    <div
+                      class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300"
+                    >
+                      History
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                      >
+                        <div class="flex-shrink-0">
+                          <img
+                            class="w-11 h-11 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                            alt="Bonnie Green avatar"
+                          />
+                          <div
+                            class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 dark:border-gray-700"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="w-3 h-3 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"
+                              ></path>
+                              <path
+                                d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="pl-3 w-full">
+                          <div
+                            class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                          >
+                            New message from
+                            <span class="font-semibold text-gray-900 dark:text-white"
+                              >Bonnie Green</span
+                            >: "Hey, what's up? All set for the presentation?"
+                          </div>
+                          <div
+                            class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                          >
+                            a few moments ago
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                      >
+                        <div class="flex-shrink-0">
+                          <img
+                            class="w-11 h-11 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                            alt="Jese Leos avatar"
+                          />
+                          <div
+                            class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-700"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="w-3 h-3 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="pl-3 w-full">
+                          <div
+                            class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                          >
+                            <span class="font-semibold text-gray-900 dark:text-white"
+                              >Jese leos</span
+                            >
+                            and
+                            <span class="font-medium text-gray-900 dark:text-white"
+                              >5 others</span
+                            >
+                            started following you.
+                          </div>
+                          <div
+                            class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                          >
+                            10 minutes ago
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                      >
+                        <div class="flex-shrink-0">
+                          <img
+                            class="w-11 h-11 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+                            alt="Joseph McFall avatar"
+                          />
+                          <div
+                            class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="w-3 h-3 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="pl-3 w-full">
+                          <div
+                            class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                          >
+                            <span class="font-semibold text-gray-900 dark:text-white"
+                              >Joseph Mcfall</span
+                            >
+                            and
+                            <span class="font-medium text-gray-900 dark:text-white"
+                              >141 others</span
+                            >
+                            love your story. See it and view more stories.
+                          </div>
+                          <div
+                            class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                          >
+                            44 minutes ago
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                      >
+                        <div class="flex-shrink-0">
+                          <img
+                            class="w-11 h-11 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
+                            alt="Roberta Casas image"
+                          />
+                          <div
+                            class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="w-3 h-3 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="pl-3 w-full">
+                          <div
+                            class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                          >
+                            <span class="font-semibold text-gray-900 dark:text-white"
+                              >Leslie Livingston</span
+                            >
+                            mentioned you in a comment:
+                            <span
+                              class="font-medium text-primary-600 dark:text-primary-500"
+                              >@bonnie.green</span
+                            >
+                            what do you say?
+                          </div>
+                          <div
+                            class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                          >
+                            1 hour ago
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600"
+                      >
+                        <div class="flex-shrink-0">
+                          <img
+                            class="w-11 h-11 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png"
+                            alt="Robert image"
+                          />
+                          <div
+                            class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="w-3 h-3 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="pl-3 w-full">
+                          <div
+                            class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                          >
+                            <span class="font-semibold text-gray-900 dark:text-white"
+                              >Robert Brown</span
+                            >
+                            posted a new video: Glassmorphism - learn how to implement
+                            the new design trend.
+                          </div>
+                          <div
+                            class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                          >
+                            3 hours ago
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <a
+                      href="../admin/history.html"
+                      class="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline"
+                    >
+                      <div class="inline-flex items-center">
+                        <svg
+                          aria-hidden="true"
+                          class="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                          <path
+                            fill-rule="evenodd"
+                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                        View all
+                      </div>
                     </a>
+                  </div>
+              
+                  <!-- Admin Profile -->
+                  <button
+                    type="button"
+                    class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    id="user-menu-button"
+                    aria-expanded="false"
+                    data-dropdown-toggle="dropdown"
+                  >
+                    <span class="sr-only">Open user menu</span>
+                    <img
+                      class="w-8 h-8 rounded-full"
+                      src="../img/home/ucbs-logo.svg"
+                      alt="admin photo"
+                    />
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    class="hidden z-50 my-4 w-56 text-base list-none bg-white  divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                    id="dropdown"
+                  >
+                    <div class="py-3 px-4">
+                      <span
+                        class="block text-sm font-semibold text-gray-900 dark:text-white"
+                        >Admin</span
+                      >
+                      <span
+                        class="block text-sm text-gray-900 truncate dark:text-white"
+                        >User Id: </span
+                      >
+                    </div>
+      
+                    <ul
+                      class="py-1 text-gray-700 dark:text-gray-300"
+                      aria-labelledby="dropdown"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 text-sm hover:bg-red-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Sign out</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- horizontal rule -->
-
-    <hr class="mx-auto w-[85%] bg-gray-200 h-[2px]">
-
-    <!-- main body start here  -->
-
-    <main class="flex-1 py-12">
-
-        <section class="px-32 ">
-
-            <!-- main container containing book manage form and book section  -->
-
-            <div class="grid grid-cols-2 gap-32 w-full">
-
-                <!-- book manage form -->
-
-                <div class="w-full flex flex-col justify-between">
-
-                    <div class="text-3xl md:text-5xl font-bold mb-8">
-                        <h1 class="w-fit">Issue Book.</h1>
-                    </div>
-
-                    <div class="text-xl font-semibold">
-                        
-                        
-
-                    </div>
-
-                    <!-- add, update, delete button group
-
-                    <div class="mt-6">
-                        <div class="text-white flex justify-around">
-                            <a class="bg-green-500 px-9 py-2 rounded-xl"  href=""><button>Add</button></a>
-                            <a class="bg-blue-500 px-9 py-2 rounded-xl" href=""><button>Update</button></a>
-                            <a class="bg-red-500 px-9 py-2 rounded-xl   " href=""><button>Delete</button></a>
-                        </div>
-                    </div>       -->
-                                                    
-                </div>
-
-                <!-- Book section -->
-
-                <div class="w-full">
-                    <div class="bg-black w-full rounded-t-2xl text-white">
-                        <div class="py-6 px-14 flex justify-between items-center">
-                            <div class="font-semibold text-xl w-[10rem]">Search for</div>
-                            <div>
-                                <div class="flex border rounded-xl">
-                                    <div>
-                                        <input class="text-black w-[23rem] h-11 rounded-l-xl px-4" type="search" id="search" name="search" placeholder="book name">
-                                    </div>      
-                                    <div class="w-[2.75rem] p-1 align-middle hover:bg-white rounded-r-xl hover:border-2 border-black">
-                                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 128 128" style="fill:#FFFFFF;">
-                                            <path d="M 52.349609 14.400391 C 42.624609 14.400391 32.9 18.1 25.5 25.5 C 10.7 40.3 10.7 64.399219 25.5 79.199219 C 32.9 86.599219 42.600391 90.300781 52.400391 90.300781 C 62.200391 90.300781 71.900781 86.599219 79.300781 79.199219 C 94.000781 64.399219 93.999219 40.3 79.199219 25.5 C 71.799219 18.1 62.074609 14.400391 52.349609 14.400391 z M 52.300781 20.300781 C 60.500781 20.300781 68.700391 23.399219 74.900391 29.699219 C 87.400391 42.199219 87.4 62.5 75 75 C 62.5 87.5 42.199219 87.5 29.699219 75 C 17.199219 62.5 17.199219 42.199219 29.699219 29.699219 C 35.899219 23.499219 44.100781 20.300781 52.300781 20.300781 z M 52.300781 26.300781 C 45.400781 26.300781 38.9 29 34 34 C 29.3 38.7 26.700391 44.800391 26.400391 51.400391 C 26.300391 53.100391 27.600781 54.4 29.300781 54.5 L 29.400391 54.5 C 31.000391 54.5 32.300391 53.199609 32.400391 51.599609 C 32.600391 46.499609 34.699219 41.799219 38.199219 38.199219 C 41.999219 34.399219 47.000781 32.300781 52.300781 32.300781 C 54.000781 32.300781 55.300781 31.000781 55.300781 29.300781 C 55.300781 27.600781 54.000781 26.300781 52.300781 26.300781 z M 35 64 A 3 3 0 0 0 32 67 A 3 3 0 0 0 35 70 A 3 3 0 0 0 38 67 A 3 3 0 0 0 35 64 z M 83.363281 80.5 C 82.600781 80.5 81.850781 80.800391 81.300781 81.400391 C 80.100781 82.600391 80.100781 84.499609 81.300781 85.599609 L 83.800781 88.099609 C 83.200781 89.299609 82.900391 90.6 82.900391 92 C 82.900391 94.4 83.8 96.700391 85.5 98.400391 L 98.300781 111 C 100.10078 112.8 102.39922 113.69922 104.69922 113.69922 C 106.99922 113.69922 109.29961 112.79961 111.09961 111.09961 C 114.59961 107.59961 114.59961 101.90039 111.09961 98.400391 L 98.300781 85.599609 C 96.600781 83.899609 94.300391 83 91.900391 83 C 90.500391 83 89.2 83.300391 88 83.900391 L 85.5 81.400391 C 84.9 80.800391 84.125781 80.5 83.363281 80.5 z M 91.900391 88.900391 C 92.700391 88.900391 93.5 89.200781 94 89.800781 L 106.69922 102.5 C 107.89922 103.7 107.89922 105.59922 106.69922 106.69922 C 105.49922 107.89922 103.6 107.89922 102.5 106.69922 L 89.800781 94.099609 C 89.200781 93.499609 88.900391 92.700391 88.900391 91.900391 C 88.900391 91.100391 89.200781 90.300781 89.800781 89.800781 C 90.400781 89.200781 91.100391 88.900391 91.900391 88.900391 z"></path>
-                                        </svg>
-                                    </div>
-                                </div>                              
-                            </div>
-                        </div>
-                        <div class="p-6 border grid grid-cols-3 gap-4 place-items-center font-semibold text-xl">
-                            <div class="justify-self-end mr-8">Book Cover</div>
-                            <div class="justify-self-end">Book Details</div>
-                            <div class=" justify-self-end border-white rounded-xl px-4 py-1">
-                                <label for="">Course:</label>
-                                <select class="px-1 font-normal border border-black rounded-lg text-white bg-[#000000] " name="books" id="books">
-                                    <option value="bca">BCA</option>
-                                    <option value="bba">BBA</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-[#F0F0F0] w-full rounded-b-2xl overflow-y-auto h-[30.25rem] pt-6 px-6">
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-1 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl my-4">Human Resource Development</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-lg flex justify-between mt-4">
-                                       <div>Pages: <span class="font-semibold">665</span></div>
-                                       <div>Year: <span class="font-semibold">1999</span></div>
-                                    </div>
-                                    <div class="text-lg flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>In Stock: <span class="font-semibold">10</span></div>
-                                    </div>
-                                    
-                                </div>
-                            </div>      
-                        </div>
-
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-xl flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
-                                    </div>
-                                </div>
-                            </div>      
-                        </div>
-
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-xl flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
-                                    </div>
-                                </div>
-                            </div>      
-                        </div>
-
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-xl flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
-                                    </div>
-                                </div>
-                            </div>      
-                        </div>
-
-                        <div class="flex justify-around">
-                            <div class="mb-6 grid grid-cols-2 gap-4 place-items-center place-content-center	border border-gray-500 rounded-xl p-6"> 
-                                <div class="justify-self-start">
-                                    <img class="rounded-md" src="https://picsum.photos/200/280" alt="">
-                                </div>                          
-                                <div>
-                                    <div>
-                                        <div class="text-xl mb-4">Book ID: <span class="font-semibold underline">A101</span></div>
-                                        <div class="font-bold text-2xl">The Picture Of Dorian Gray</div>
-                                        <div>Author: <span class="font-semibold underline">J.K. Rowling</span></div>
-                                        <div>Genre: <span class="font-semibold underline">Fantasy, Fantasy Fiction</span></div>
-                                    </div>
-                                    <div class="text-xl flex justify-between mt-4">
-                                        <div class="font-semibold">BCA</div>
-                                        <div>Stock Available: <span class="font-semibold">10</span></div>
-                                    </div>
-                                </div>
-                            </div>      
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
+              </div>
+            </nav>
         
-</main>
+            <!-- Sidebar -->
+        
+            <aside
+              class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+              aria-label="Sidenav"
+              id="drawer-navigation"
+            >
+              <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
+                <form action="#" method="GET" class="md:hidden mb-2">
+                  <label for="sidebar-search" class="sr-only">Search</label>
+                  <div class="relative">
+                    <div
+                      class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      name="search"
+                      id="sidebar-search"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                      placeholder="Search"
+                    />
+                  </div>
+                </form>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="./over-view.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                      </svg>
+                      <span class="ml-3">Overview</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./book-management.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <img src="../img/admin-dashboard/manage-book.svg" alt="manage book">
+                      <span class="ml-3">Manage Book</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./user-management.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      
+                      <img src="../img/admin-dashboard/manage-user.svg" alt="manage user">
+                      <span class="ml-3">Manage User</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./issue-book.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white bg-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <img src="../img/admin-dashboard/issue-book.svg" alt="issue book">
+                      <span class="ml-3">Issue Book</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./issue-fine.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <img src="../img/admin-dashboard/issue-fine.svg" alt="issue fine">
+                      <span class="ml-3">Issue Fine</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./book-inventory.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <img src="../img/admin-dashboard/book-inventory.svg" alt="book inventory">
+                      <span class="ml-3">Book Inventory</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./history.html"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <img src="../img/admin-dashboard/history.svg" alt="history">
+                      <span class="ml-3">History</span>
+                    </a>
+                  </li>               
+                </ul>
+                <ul
+                  class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                    >
+                      <img src="../img/admin-dashboard/about.svg" alt="about">
+                      <span class="ml-3">About</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20">
+                <div class="bg-white rounded-lg border-2 shadow-lg dark:bg-gray-800">
+                    <div class="w-full mx-auto max-w-screen-xl p-2 md:flex items-center justify-center text-center md:items-center md:justify-between">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Made with ❤️ by Team <a href="https://digitcrib.com/" class="hover:text-[#06FFFF] font-medium">DigitCrib™</a><br> All Rights Reserved.
+                    </span>
+                    </div>
+                </div>
+              </div>
+            </aside>
+        
+            <main class="p-4 md:ml-64 h-auto pt-20">
+              <div class="border-2 border-solid rounded-2xl border-gray-300 dark:border-gray-600 mb-4 h-[46rem]">
 
-    <script src="./script.js"></script>
+                <div class="grid grid-cols-2 gap-0 w-full">
 
+                    <!-- user manage form -->
+    
+                    <div class="w-full flex flex-col px-14 py-8">
+
+                        <div class="text-3xl md:text-5xl font-bold mb-8">
+                            <h1 class="w-fit">Issue Book.</h1>
+                        </div>
+    
+                        <div>
+
+                        </div> 
+
+                    </div>
+                </div>
+
+            
+
+            </main>
+          </div>
+    </section>
+
+	<script src="./script.js"></script>
+	<script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 </html>

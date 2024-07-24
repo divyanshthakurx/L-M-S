@@ -556,6 +556,11 @@
                                 <label for="">Student Name</label>
                                 <input class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="student name" readonly>
                             </div>
+
+                            <div class="flex flex-col">
+                              <label for="">User ID</label>
+                              <input class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="number" placeholder="user id" name="user id" id="user id" readonly>
+                          </div> 
                             
                             <div class="flex flex-col">
                                 <label for="">Course</label>
@@ -567,35 +572,29 @@
                             </div>
 
                             <div class="flex flex-col">
+                              <label for="">Class Roll Number</label>
+                              <input class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="class roll number" readonly>
+                            </div>
+
+                            <div class="flex flex-col">
                                 <label for="">Issue Fine</label>
                                 <input class="shadow-lg appearance-none h-10 mt-2 placeholder:font-normal  placeholder:text-gray-500 px-2 font-normal border-2 border-blue-600 rounded-lg bg-[#F0F0F0]" type="number" placeholder="issue fine">
                             </div>
 
                             <div class="flex flex-col">
-                              <label for="">User ID</label>
-                              <input class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="number" placeholder="user id" name="user id" id="user id" readonly>
-                          </div>  
+                                <label for="">Year</label>
+                                <select class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books" disabled>
+                                    <option>choose course year</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
 
-                          <div class="flex flex-col">
-                              <label for="">Class Roll Number</label>
-                              <input class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="class roll number" readonly>
-                          </div>
-                          
-
-                          <div class="flex flex-col">
-                              <label for="">Year</label>
-                              <select class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-10 mt-2 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books" disabled>
-                                  <option>choose course year</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                              </select>
-                          </div>
-
-                          <div class="flex flex-col md:col-span-2">
-                            <label for="">User Fine Status</label>
-                            <textarea class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-32 w-full mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" placeholder="user fine status..." type="text" name="" id="" readonly></textarea>
-                          </div>
+                            <div class="flex flex-col md:col-span-2">
+                              <label for="">User Fine Status</label>
+                              <textarea class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-32 w-full mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" placeholder="user fine status..." type="text" name="" id="" readonly></textarea>
+                            </div>
 
                         </div>
 

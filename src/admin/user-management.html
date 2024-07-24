@@ -445,7 +445,7 @@
                   </div>
                 </form>
                 <ul class="space-y-2">
-                  <li>
+                  <!-- <li>
                     <a
                       href="./over-view.html"
                       class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -462,7 +462,7 @@
                       </svg>
                       <span class="ml-3">Overview</span>
                     </a>
-                  </li>
+                  </li> -->
                   <li>
                     <a
                       href="./book-management.html"
@@ -480,15 +480,6 @@
                       
                       <img src="../img/admin-dashboard/manage-user.svg" alt="manage user">
                       <span class="ml-3">Manage User</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="./issue-book.html"
-                      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                    >
-                      <img src="../img/admin-dashboard/issue-book.svg" alt="issue book">
-                      <span class="ml-3">Issue Book</span>
                     </a>
                   </li>
                   <li>
@@ -543,104 +534,101 @@
               </div>
             </aside>
         
-            <main class="p-4 md:ml-64 h-screen pt-20">
-              <div class="border-2 border-solid rounded-2xl border-gray-300 dark:border-gray-600 mb-4 h-[46rem]">
+            <main class="p-4 md:ml-64 h-auto pt-20">
 
-                <div class="grid grid-cols-2 gap-0 w-full">
+              <div class="border-2 border-solid rounded-2xl border-gray-300 dark:border-gray-600 mb-4 h-auto">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-0 w-full">
 
                     <!-- user manage form -->
     
-                    <div class="w-full flex flex-col px-14 py-8">
+                    <div class="w-full grid grid-cols-1 justify-items-stretch gap-6 p-6 md:px-12 md:py-8">
 
-                      <div class="text-3xl md:text-5xl font-bold mb-8">
+                      <div class="text-3xl md:text-5xl font-bold">
                           <h1 class="w-fit">Manage User.</h1>
                       </div>
   
                       <div class="text-xl font-semibold">
-                          <form action="">
   
-                              <div class="flex justify-between">
-                                  <div>
-                                      
-                                      <div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6">
   
-                                          <div class="flex flex-col mb-4">
-                                              <label for="">Student Name</label>
-                                              <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="student name">
-                                          </div>
-                                          
-                                          <div class="flex flex-col mb-4">
-                                            <label for="">Class Roll Number</label>
-                                            <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="class roll number">
-                                          </div>
+                            <div class="flex flex-col">
+                                <label for="">Student Name</label>
+                                <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="student name">
+                            </div>
+                            
+                            <div class="flex flex-col">
+                              <label for="">Class Roll Number</label>
+                              <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="text" placeholder="class roll number">
+                            </div>
 
-                                          <div class="flex flex-col mb-4">
-                                              <label for="">Course</label>
-                                              <select class="h-10 mt-2 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
-                                                  <option value="bba">All</option>
-                                                  <option value="bca">BCA</option>
-                                                  <option value="bba">BBA</option>
-                                              </select>
-                                          </div>
-  
-                                      </div>
-                                  </div>
-                                  
-                                  <div class="flex flex-col"> 
+                            <div class="flex flex-col">
+                                <label for="">Course</label>
+                                <select class="h-10 mt-2 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
+                                    <option value="bba">All</option>
+                                    <option value="bca">BCA</option>
+                                    <option value="bba">BBA</option>
+                                </select>
+                            </div>
 
+                            <div class="flex flex-col">
+                              <label for="">User ID</label>
+                              <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="number" placeholder="user id" name="user id" id="">
+                            </div>
 
-                                      <div class="flex flex-col mb-4">
-                                        <label for="">User ID</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="number" placeholder="user id" name="user id" id="">
-                                      </div>
+                            <div class="flex flex-col">
+                              <label for="">Password</label>
+                              <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="date">
+                            </div> 
 
-                                      <div class="flex flex-col mb-4">
-                                        <label for="">Password</label>
-                                        <input class="h-10 mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" type="date">
-                                      </div> 
-  
-                                      <div class="flex flex-col">
-                                          <label for="">Year</label>
-                                          <select class="h-10 mt-2 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
-                                             <option value="1">1</option>
-                                              <option value="2">2</option>
-                                              <option value="3">3</option>
-                                          </select>
-                                      </div>
-                                  </div>
+                            <div class="flex flex-col">
+                                <label for="">Year</label>
+                                <select class="h-10 mt-2 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" name="books" id="books">
+                                   <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col  md:col-span-2">
+                              <div class="flex justify-between items-center">
+                                <label for="issued-bboks">Issued Books</label>
+                                <a class="hover:underline" href="./issue-book.html">
+                                  <div class="flex justify-center items-center">
+                                    <img src="../img/admin-dashboard/edit.svg" alt="">
+                                    <div>edit</div>  
+                                  </div> 
+                                </a>      
                               </div>
+                              <textarea class="shadow-lg appearance-none focus:outline-none focus:ring-0 h-32 w-full mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" placeholder="issued books..." type="text" name="" id=""></textarea>
+                          </div>
   
-                              <div class="flex flex-col my-4">
-                                  <label for="">Issued Books</label>
-                                  <textarea class="h-32 w-full mt-2 placeholder:font-normal placeholder:text-gray-500 px-2 font-normal border border-black rounded-lg bg-[#F0F0F0]" placeholder="issued book..." type="text" name="" id=""></textarea>
-                              </div>
-                          
-                          </form>
+                        </div>
+
                       </div>
-  
-  
-  
+ 
                       <!-- add, update, delete button group -->
   
-                      <div class="mt-6">
+                      <div>
                           <div class="text-white flex justify-around">
                               <a class="bg-green-500 px-9 py-2 rounded-xl"  href=""><button>Add</button></a>
                               <a class="bg-blue-500 px-9 py-2 rounded-xl" href=""><button>Update</button></a>
-                              <a class="bg-red-500 px-9 py-2 rounded-xl   " href=""><button>Delete</button></a>
+                              <a class="bg-red-500 px-9 py-2 rounded-xl" href=""><button>Delete</button></a>
                           </div>
-                      </div>                                                          
+                      </div> 
+
                     </div>
     
                     <!-- user section -->
     
                     <div class="w-full">
                       <div class="bg-black w-full rounded-t-2xl text-white">
-                          <div class="py-4 px-4 flex justify-between items-center">
+                          <div class="py-6 md:py-4 px-4 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
                             <div class="font-semibold text-lg ">Search for</div>
                             <div>
                                 <div class="flex justify-center items-center border rounded-xl">
                                     <div>
-                                        <input class="text-black w-full h-11 rounded-l-xl px-4" type="search" id="search" name="search" placeholder="user name">
+                                        <input class="text-black w-full h-11 rounded-l-xl px-4" type="search" id="search" name="search" placeholder="book name">
                                     </div>      
                                     <div class="w-[2.75rem] p-1 flex justify-center items-center cursor-pointer rounded-r-xl hover:border-2 border-black">
                                       <img class="w-8 h-8" src="../img/admin-dashboard/search.svg" alt="search icon">
@@ -657,9 +645,9 @@
                                 </select>
                             </div>
                           </div>
-                          <div class="p-6 border grid grid-cols-2 place-items-center font-semibold text-xl">
+                          <div class="p-6 border grid grid-cols-1 md:grid-cols-2 place-items-center font-semibold text-xl">
                               <div class="justify-self-center">User Details</div>
-                              <div class=" justify-self-center border-white rounded-xl px-4 py-1">
+                              <div class="justify-self-center border-white rounded-xl">
                                   <label for="">Course:</label>
                                   <select class="px-2 font-normal border border-white rounded-lg text-white bg-[#000000] " name="books" id="books">
                                       <option>All</option>
@@ -670,6 +658,7 @@
                           </div>
                       </div>
                       <div class="bg-[#F0F0F0] w-full rounded-b-2xl overflow-y-auto h-[34.75rem] pt-6 px-6">
+
                           <div class="mb-6 flex flex-col justify-around border border-gray-500 rounded-xl p-6">
                               <div class="grid grid-cols-2 gap-1 place-items-center place-content-center"> 
                                   <div class="flex flex-col gap-3">
